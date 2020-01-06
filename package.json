@@ -1,8 +1,8 @@
 {
   "name": "image-handler",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.4",
+  "description": "A project extend handler of image on H5",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"

@@ -1,7 +1,7 @@
 import _compress from './compress-image'
 
 const imgHandler = Object.create(null)
-imgHandler.version = '0.0.1'
+imgHandler.version = '0.0.4'
 imgHandler.compress = _compress
 ;(function () {
   'use strict'

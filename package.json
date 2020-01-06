@@ -1,6 +1,6 @@
 {
   "name": "image-handler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A project extend handler of image on H5",
   "main": "dist/bundle.js",
   "scripts": {
@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git@github.com:zhangjialegh/img-handler.git"
   },
-  "author": "",
+  "keywords": [
+    "exif-js",
+    "image",
+    "compress",
+    "image compress"
+  ],
+  "author": "zhangjialegh <zjl1195185765@outlook.com>",
   "license": "ISC",
   "dependencies": {
     "exif-js": "^2.3.0"

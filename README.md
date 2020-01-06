@@ -1,3 +1,4 @@
+[![NPM](https://nodei.co/npm/image-handler.png?compact=true)](https://nodei.co/npm/image-handler/)
 # Installation
 
 ```

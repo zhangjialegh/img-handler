@@ -1,8 +1,9 @@
-import _compress from './compress-image'
+import { compressImage, fileToUrl } from './image'
 
 const imgHandler = Object.create(null)
-imgHandler.version = '0.0.5'
-imgHandler.compress = _compress
+imgHandler.version = '0.0.6'
+imgHandler.compressImage = compressImage
+imgHandler.fileToUrl = fileToUrl
 ;(function () {
   'use strict'
 

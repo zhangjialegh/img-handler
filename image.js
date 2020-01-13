@@ -1,18 +1,18 @@
 // 压缩图片
 import EXIF from 'exif-js'
-export default function _compress (file, quality = 0.5, maxSize = 400*1024) {
+export function compressImage (file, quality = 0.5, maxSize = 400*1024) {
   return new Promise((resolve, reject) => {
     if (window.FileReader === undefined || window.File === undefined || !file.type.includes('image/')) {
+      resolve(file)
+    }
+    // 如果图片小于压缩尺寸就不压缩
+    if (file.size < maxSize) {
       resolve(file)
     }
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onload = function () {
       const result = this.result
-      // 如果图片小于压缩尺寸就不压缩
-      if (result.length < maxSize) {
-        resolve(file)
-      }
       let img = new Image()
       img.src = result
       img.onload = function () {
@@ -98,6 +98,22 @@ function adjustIosOrient (img, file, ctx) { // translate是平移变换，scale(
       resolve()
     })
   })
+}
+
+// file对象转化为本地url
+const files = {}
+export function fileToUrl (file) {
+  for (const key in files) {
+    if (files.hasOwnProperty(key)) {
+      const oldFile = files[key]
+      if (oldFile === file) {
+        return key
+      }
+    }
+  }
+  var url = (window.URL || window.webkitURL).createObjectURL(file)
+  files[url] = file
+  return url
 }
 
 // base64转化为file对象

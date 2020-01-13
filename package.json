@@ -1,6 +1,6 @@
 {
   "name": "image-handler",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A project extend handler of image on H5",
   "main": "dist/bundle.js",
   "scripts": {

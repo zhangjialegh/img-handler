@@ -7,10 +7,12 @@ npm i image-handler
 
 # Usage
 
+## compressImage(OBJECT)
+
 ```javascript
 import imgHandler from 'image-handler'
 
-imgHandler.compress(file, quality, maxSize)
+imgHandler.compressImage(file, quality, maxSize)
 
 ```
 
@@ -53,4 +55,40 @@ return a Promise Object
  // file: after compressing file object
 
 })
+```
+
+## fileToUrl(OBJECT)
+
+```javascript
+import imgHandler from 'image-handler'
+
+imgHandler.fileToUrl(file)
+
+```
+**Params descript**
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Params</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">file</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">File Object</td>
+</tr>
+</tbody>
+</table>
+
+**Callback description**
+
+return a local file url
+
+```javascript
+// example: blob:null/34fd9c5a-fe01-4811-8154-e91858e323c9
+
+<img src="blob:null/34fd9c5a-fe01-4811-8154-e91858e323c9">
 ```

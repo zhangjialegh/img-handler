@@ -41,12 +41,12 @@ function compressFn (img, quality, file) {
     return adjustIosOrient(img, file, ctx)
     .then(() => {
       // 图片压缩
-      const data = canvas.toDataURL('image/jpeg', quality) // data url的形式
+      const data = canvas.toDataURL(file.type, quality) // data url的形式
       return base64ToFile(data)
     })
   } else {
     ctx.drawImage(img, 0, 0, targetWidth, targetHeight)
-    const data = canvas.toDataURL('image/jpeg', quality) // data url的形式
+    const data = canvas.toDataURL(file.type, quality) // data url的形式
     return base64ToFile(data)
   }
 }
